@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     @location = Location.find(params[:location_id])
     @post = @location.posts.create(post_params)
 
-    redirect_to post_path(@location)
+    redirect_to location_path(@location)
 
   end
 
