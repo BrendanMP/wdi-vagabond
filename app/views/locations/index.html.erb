@@ -3,6 +3,8 @@ City Grid -> location/:id
 -->
 
 <% @locations.each do |location| %>
-    <img src="<%= location.photo_url %>" alt="" width="150">
-    <%= location.name %>
+    <%= link_to(location_path(location)) do %>
+      <img src="<%= location.photo_url %>" alt="" width="150">
+      <%= location.name %>
+    <% end %>
 <% end %>
