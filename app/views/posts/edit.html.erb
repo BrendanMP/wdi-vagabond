@@ -1,4 +1,4 @@
-<%= form_for([@location, @location.posts.build]) do |f| %>
+<%= form_for [@location, @post] do |f| %>
     <p>
       <%= f.label :title %>
       <%= f.text_field :title %>
