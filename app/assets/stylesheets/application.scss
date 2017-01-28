@@ -71,3 +71,81 @@ $link-hover-decoration: none;
 .locations {
   margin: 4rem 0;
 }
+
+.single-location {
+  position: relative;
+  margin: 0 0 4rem;
+  &__hero {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    min-height: 40vh;
+
+    filter: grayscale(100%);
+    z-index: 100;
+  }
+  &__hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 40vh;
+    pointer-events: none;
+    background-image: linear-gradient(to top, $brand-primary, darken($brand-primary, 3%));
+    opacity: .92;
+    z-index: 150;
+  }
+  &__hero-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: 'Comfortaa', $font-family-base;
+  }
+}
+
+
+.form {
+  label {
+    font-weight: 700;
+  }
+  input, textarea {
+    @extend .form-control;
+  }
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  a {
+    @extend .btn, .btn-primary, .btn-sm;
+    + a {
+      @extend .btn-secondary;
+    }
+  }
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+.edit {
+  background: $brand-primary;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .form {
+    label {
+      color: #FFFFFF;
+    }
+    flex: 1 1 auto;
+    max-width: 20rem;
+  }
+}

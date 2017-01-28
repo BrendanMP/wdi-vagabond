@@ -1,6 +1,36 @@
-Hello from <b><%= @location.name %></b>
-<hr>
-<%= render @location.posts %>
+<section class="single-location">
+  <header class="single-location__hero" style="background-image: url('<%= @location.photo_url %>'); ">
 
-<hr>
-<%= render 'posts/form' %>
+  </header>
+  <div class="single-location__hero-inner">
+    <h1 class="display-1"><%= @location.name %></h1>
+  </div>
+  <div class="single-location__hero-overlay"></div>
+</section>
+
+<section class="single-location">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-8">
+        <%= render @location.posts %>
+      </div>
+
+      <div class="col-md-4">
+        <%= render 'posts/form' %>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="container">
+  <div class="row">
+
+  </div>
+
+</div>
+
+
+

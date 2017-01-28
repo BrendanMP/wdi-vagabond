@@ -1,13 +1,15 @@
-<%= form_for([@location, @location.posts.build]) do |f| %>
-    <p>
-      <%= f.label :title %>
+<%= form_for([@location, @location.posts.build], :html => { :class =>'form' })  do |f| %>
+    <h2>What did you like best <%= @location.name %>?</h2>
+    <hr>
+    <p class="form-group">
+      <%= f.label :title, :html => { :class =>'form' } %>
       <%= f.text_field :title %>
     </p>
-    <p>
+    <p class="form-group">
       <%= f.label :body %>
       <%= f.text_area :body %>
     </p>
-    <p>
+    <p class="form-group">
       <%= f.submit %>
     </p>
 <% end %>
