@@ -1,15 +1,6 @@
-<!--
-City Image
-Include posts
-and new post form
--->
-
-Hello from show
-
-<%= @location.name %>
+Hello from <b><%= @location.name %></b>
+<hr>
+<%= render @location.posts %>
 
 <hr>
-
 <%= render 'posts/form' %>
-
-<%= render @location.posts %>
