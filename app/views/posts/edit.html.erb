@@ -1,13 +1,16 @@
-<%= form_for [@location, @post] do |f| %>
-    <p>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </p>
-    <p>
-      <%= f.label :body %>
-      <%= f.text_area :body %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-<% end %>
+<section class="edit">
+  <%= form_for([@location, @post] , :html => { :class =>'form' }) do |f|  %>
+      <p>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </p>
+      <p>
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+  <% end %>
+</section>
+

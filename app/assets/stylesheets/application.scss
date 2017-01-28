@@ -1,0 +1,151 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
+@import "bourbon";
+
+
+$white:  #fff;
+$black:  #000;
+$red:    #d9534f;
+$orange: #f0ad4e;
+$yellow: #ffd500;
+$green:  #5cb85c;
+$blue:   #0275d8;
+$teal:   #5bc0de;
+$pink:   #ff5b77;
+$purple: #613d7c;
+
+$brand-primary:             $pink;
+$brand-success:             $green;
+$brand-info:                $teal;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+
+$link-hover-decoration: none;
+
+
+@import "bootstrap";
+
+.logo {
+  max-width: 12rem;
+  margin-bottom: 2rem;
+  &__bg {
+    fill: rgba(white,0.2);
+  }
+}
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $brand-primary;
+  color: #ffffff;
+  h1 {
+    font-family: 'Comfortaa', $font-family-base;
+    font-weight: 700;
+    font-size: 4vw;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.15em;
+  }
+  h2 {
+    font-family: 'Comfortaa', $font-family-base;
+    font-weight: 400;
+    font-size: 2.5vw;
+  }
+}
+
+.locations {
+  margin: 4rem 0;
+}
+
+.single-location {
+  position: relative;
+  margin: 0 0 4rem;
+  &__hero {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    min-height: 40vh;
+
+    filter: grayscale(100%);
+    z-index: 100;
+  }
+  &__hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 40vh;
+    pointer-events: none;
+    background-image: linear-gradient(to top, $brand-primary, darken($brand-primary, 3%));
+    opacity: .92;
+    z-index: 150;
+  }
+  &__hero-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: 'Comfortaa', $font-family-base;
+  }
+}
+
+
+.form {
+  label {
+    font-weight: 700;
+  }
+  input, textarea {
+    @extend .form-control;
+  }
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  a {
+    @extend .btn, .btn-primary, .btn-sm;
+    + a {
+      @extend .btn-secondary;
+    }
+  }
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+.edit {
+  background: $brand-primary;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .form {
+    label {
+      color: #FFFFFF;
+    }
+    flex: 1 1 auto;
+    max-width: 20rem;
+  }
+}

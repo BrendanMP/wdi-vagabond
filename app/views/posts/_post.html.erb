@@ -1,10 +1,18 @@
-<div>
-  <h5><%= post.title %></h5>
-  <p><%= post.body %></p>
-  <p><%= link_to 'Edit', edit_location_post_path(post.location_id, post.id) %></p>
-  <p>
-    <%= link_to 'Destroy', [post.location, post],
-                method: :delete,
-                data: {confirm: 'Are you sure?'} %>
-  </p>
+<div class="card post">
+  <div class="card-block">
+    <div class="row">
+      <div class="col-md-8">
+        <h5><%= post.title %></h5>
+        <p><%= post.body %></p>
+        <%= link_to 'Edit Comment', edit_location_post_path(post.location_id, post.id),
+                    class: 'btn btn-sm btn-primary'%>
+      </div>
+      <div class="col-md-4 text-right">
+        <%= link_to 'Remove', [post.location, post],
+                    class: 'btn btn-sm btn-secondary',
+                    method: :delete,
+                    data: {confirm: 'Are you sure?'}%>
+      </div>
+    </div>
+  </div>
 </div>

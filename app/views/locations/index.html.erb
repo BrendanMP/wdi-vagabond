@@ -2,10 +2,48 @@
 City Grid -> location/:id
 -->
 
-<% @locations.each do |location| %>
-    <%= link_to(location_path(location)) do %>
-      <img src="<%= location.photo_url %>" alt="" width="150">
-      <%= location.name %>
-    <% end %>
-<% end %>
+<section class="landing">
+  <svg
+      class="logo"
+      style="enable-background:new 0 0 110 110;"
+      version="1.0" viewBox="0 0 110 110"
+      xml:space="preserve"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard"/>
+    <g id="Multicolor">
+      <circle cx="55" cy="55" r="55" class="logo__bg"/>
+      <g>
+        <polygon points="49.67,76.33 43,83 43,73   " style="fill:#CFD3D4;"/>
+        <polygon points="87,27 65,84 43,73 43,83 35,67 23,59   " style="fill:#FFFFFF;"/>
+        <polygon points="35,67 43,83 43,73 87,27   " style="fill:#E2E4E5;"/>
+      </g>
+    </g>
+  </svg>
+  <h1>Vagabond</h1>
+  <h2>Go places.</h2>
+</section>
+
+
+<section class="locations">
+  <div class="container">
+    <div class="row">
+      <% @locations.each do |location| %>
+          <div class="col-md">
+            <%= link_to(location_path(location)) do %>
+                <div class="card">
+                  <img src="<%= location.photo_url %>" class="card-img-top img-fluid"/>
+                  <div class="card-block">
+                    <h5 class="display-4"><%= location.name %></h5>
+                    <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur.</p>
+                  </div>
+                </div>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+
+
 
