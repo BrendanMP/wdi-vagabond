@@ -170,3 +170,11 @@ $link-hover-decoration: none;
   display: flex;
   flex-direction: column-reverse;
 }
+
+.card-bg-img {
+  background-size: cover;
+  height: 12rem;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-position: center;
+}

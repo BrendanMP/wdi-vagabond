@@ -31,7 +31,9 @@ City Grid -> location/:id
           <div class="col-md-4">
             <%= link_to(location_path(location)) do %>
                 <div class="card">
-                  <img src="<%= location.photo_url %>" class="card-img-top img-fluid"/>
+                  <div class="card-bg-img" style="background-image: url('<%= location.photo_url %>');">
+
+                  </div>
                   <div class="card-block">
                     <h5 class="display-4"><%= location.name %></h5>
                     <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur.</p>
