@@ -28,7 +28,7 @@ City Grid -> location/:id
   <div class="container">
     <div class="row">
       <% @locations.each do |location| %>
-          <div class="col-md">
+          <div class="col-md-4">
             <%= link_to(location_path(location)) do %>
                 <div class="card">
                   <img src="<%= location.photo_url %>" class="card-img-top img-fluid"/>
@@ -43,7 +43,3 @@ City Grid -> location/:id
     </div>
   </div>
 </section>
-
-
-
-

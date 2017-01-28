@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+
+
   def create
     @location = Location.find(params[:location_id])
     @post = @location.posts.create(post_params)

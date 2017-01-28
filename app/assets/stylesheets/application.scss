@@ -165,3 +165,8 @@ $link-hover-decoration: none;
     max-width: 20rem;
   }
 }
+
+.post-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
