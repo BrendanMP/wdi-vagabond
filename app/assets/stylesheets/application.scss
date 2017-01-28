@@ -14,10 +14,37 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
 @import "bourbon";
-@import "variables";
+
+
+$white:  #fff;
+$black:  #000;
+$red:    #d9534f;
+$orange: #f0ad4e;
+$yellow: #ffd500;
+$green:  #5cb85c;
+$blue:   #0275d8;
+$teal:   #5bc0de;
+$pink:   #ff5b77;
+$purple: #613d7c;
+
+$brand-primary:             $pink;
+$brand-success:             $green;
+$brand-info:                $teal;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+
+$link-hover-decoration: none;
+
+
 @import "bootstrap";
 
-
+.logo {
+  max-width: 12rem;
+  margin-bottom: 2rem;
+  &__bg {
+    fill: rgba(white,0.2);
+  }
+}
 
 .landing {
   min-height: 100vh;
@@ -28,21 +55,19 @@
   background: $brand-primary;
   color: #ffffff;
   h1 {
-    font-family: 'Comfortaa';
-    font-weight: 900;
-    font-size: 7vw;
-    letter-spacing: -0.07em;
-    margin-bottom: 0.2em;
+    font-family: 'Comfortaa', $font-family-base;
+    font-weight: 700;
+    font-size: 4vw;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.15em;
   }
   h2 {
-    font-family: 'Comfortaa';
+    font-family: 'Comfortaa', $font-family-base;
     font-weight: 400;
-    margin-bottom: 0.25em;
-    //text-transform: uppercase;
     font-size: 2.5vw;
   }
 }
 
 .locations {
-
+  margin: 4rem 0;
 }
