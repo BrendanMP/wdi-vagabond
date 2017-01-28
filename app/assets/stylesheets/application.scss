@@ -38,6 +38,10 @@ $link-hover-decoration: none;
 
 @import "bootstrap";
 
+body {
+  position: relative;
+}
+
 .logo {
   max-width: 12rem;
   margin-bottom: 2rem;
@@ -169,4 +173,33 @@ $link-hover-decoration: none;
 .post-container {
   display: flex;
   flex-direction: column-reverse;
+}
+
+.card-bg-img {
+  background-size: cover;
+  height: 12rem;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-position: center;
+}
+
+a.back-btn {
+  position: absolute;
+  background: rgba(white,0.2);
+  top: 1rem;
+  left: 1rem;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5000em;
+  z-index: 250;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/left-arrow.svg');
+  background-size: contain;
+  &:hover {
+    background: rgba(white,0.6);
+  }
 }
