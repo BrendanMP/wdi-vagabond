@@ -54,22 +54,38 @@ $link-hover-decoration: none;
   justify-content: center;
   background: $brand-primary;
   color: #ffffff;
+
   h1 {
     font-family: 'Comfortaa', $font-family-base;
     font-weight: 700;
-    font-size: 4vw;
+    font-size: 8vw;
     letter-spacing: -0.04em;
     margin-bottom: 0.15em;
+    @include media-breakpoint-up(md) {
+      font-size: 5vw;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 5rem;
+    }
   }
   h2 {
     font-family: 'Comfortaa', $font-family-base;
     font-weight: 400;
-    font-size: 2.5vw;
+    font-size: 6vw;
+    @include media-breakpoint-up(md) {
+      font-size: 3vw;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 3rem;
+    }
   }
 }
 
 .locations {
-  margin: 4rem 0;
+  margin: 4rem 0 2rem;
+  .card {
+    margin-bottom: 2rem;
+  }
 }
 
 .single-location {
