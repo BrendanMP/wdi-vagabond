@@ -1,7 +1,7 @@
 <div>
   <h5><%= post.title %></h5>
   <p><%= post.body %></p>
-  <p><%= link_to 'Edit', edit_location_post_path(post) %></p>
+  <p><%= link_to 'Edit', edit_location_post_path(post.location_id, post.id) %></p>
   <p>
     <%= link_to 'Destroy', [post.location, post],
                 method: :delete,

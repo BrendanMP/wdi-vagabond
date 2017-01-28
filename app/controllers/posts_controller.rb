@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = @location.posts.find(params[:id])
 
     if @post.update(post_params)
-      redirect_to location_path
+      redirect_to location_path(@post.location_id)
     else
       render 'edit'
     end
