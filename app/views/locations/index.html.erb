@@ -2,10 +2,22 @@
 City Grid -> location/:id
 -->
 
-<% @locations.each do |location| %>
-    <%= link_to(location_path(location)) do %>
-      <img src="<%= location.photo_url %>" alt="" width="150">
-      <%= location.name %>
-    <% end %>
-<% end %>
+<section class="landing">
+  <h2>Go places.</h2>
+  <h1>Vagabond</h1>
+</section>
+
+
+<section class="locations">
+  <% @locations.each do |location| %>
+      <%= link_to(location_path(location))  do %>
+          <article class="locations__link" style="background-image:url(<%= location.photo_url %>);">
+            <h5 class="display-4"><%= location.name %></h5>
+          </article>
+      <% end %>
+  <% end %>
+</section>
+
+
+
 
