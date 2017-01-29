@@ -8,6 +8,7 @@
   </header>
   <div class="single-location__hero-inner">
     <h1 class="display-1"><%= @location.name %></h1>
+    <h2><%= @location.description %></h2>
   </div>
   <div class="single-location__hero-overlay"></div>
 </section>
@@ -17,6 +18,8 @@
     <div class="row">
 
       <div class="col-md-8">
+        <h1>Things to do in <%= @location.name %></h1>
+        <p class="text-muted mb-4">See what other people had to say about <%= @location.name %>.</p>
         <div class="post-container">
           <%= render @location.posts %>
         </div>
