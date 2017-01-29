@@ -15,8 +15,9 @@ ActiveRecord::Schema.define(version: 20170127175211) do
   create_table "locations", force: :cascade do |t|
     t.string   "name"
     t.string   "photo_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "posts", force: :cascade do |t|
