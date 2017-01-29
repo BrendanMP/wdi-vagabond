@@ -1,15 +1,14 @@
-<%= form_for([@location, @location.posts.build], :html => { :class =>'form' })  do |f| %>
+<%= form_for([@location, @location.posts.build], :html => {:class => 'form'}, validate: true) do |f| %>
 
     <h2>Talk about <%= @location.name %>!</h2>
     <h5> Tell other travelers about your favorite places and off-the-beaten-path adventures. </h5>
     <hr>
+
     <p class="form-group">
-      <%= f.label :title, :html => { :class =>'form' } %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, placeholder: "Enter a destination." %>
     </p>
     <p class="form-group">
-      <%= f.label :body %>
-      <%= f.text_area :body %>
+      <%= f.text_area :body, placeholder: "What's special about it?" %>
     </p>
     <p class="form-group">
       <%= f.submit %>

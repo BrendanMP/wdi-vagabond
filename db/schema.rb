@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20170127175211) do
     t.string   "name"
     t.string   "photo_url"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
