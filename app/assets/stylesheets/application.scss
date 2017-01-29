@@ -59,6 +59,22 @@ body {
   background: $brand-primary;
   color: #ffffff;
 
+  position: relative;
+
+  &:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 1.25rem $brand-primary;
+    border-left: solid 1.25rem transparent;
+    border-right: solid 1.25rem transparent;
+  }
+
   h1 {
     font-family: 'Comfortaa', $font-family-base;
     font-weight: 700;
@@ -86,7 +102,7 @@ body {
 }
 
 .locations {
-  margin: 4rem 0 2rem;
+  margin: 5rem 0 2rem;
   .card {
     margin-bottom: 2rem;
     .display-4 {
@@ -199,8 +215,8 @@ a.back-btn {
   top: 1rem;
   left: 1rem;
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 5000em;
   z-index: 250;
   color: #000;
