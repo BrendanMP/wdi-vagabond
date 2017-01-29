@@ -1,6 +1,7 @@
 <%= form_for([@location, @location.posts.build], :html => { :class =>'form' })  do |f| %>
 
-    <h2>What did you like best <%= @location.name %>?</h2>
+    <h2>Talk about <%= @location.name %>!</h2>
+    <h5> Tell other travelers about your favorite places and off-the-beaten-path adventures. </h5>
     <hr>
     <p class="form-group">
       <%= f.label :title, :html => { :class =>'form' } %>
