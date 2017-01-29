@@ -12,4 +12,4 @@
    Location.create(name: 'London', photo_url: "https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5232370632001_5203581082001-vs.jpg?pubId=5104226627001&videoId=5203581082001", description: "It is illegal to die in the Palace of Westminster.")
    Location.create(name: 'Dubai', photo_url: "http://ihg.scene7.com/is/image/ihg/intercontinental-dubai-4328452913-2x1?wid=1440&fit=fit,1", description: "Palm-shaped islands, shopping, and the world's tallest building.")
    Location.create(name: 'Tokyo', photo_url: "https://voulezvousdiner.a.cdnify.io/photos/_places/places.tokyo.jpg", description: "The most populous metropolitan area in the world was originally a small fishing town called Edo.")
-   Location.create(name: 'Cairo', photo_url: "http://famouswonders.com/wp-content/gallery/pyramids-of-egypt/giza-pyramids-cairo-egypt.jpg", description: "Nile River, ancient artifacts, and of course the pyramids")
+   Location.create(name: 'Cairo', photo_url: "http://famouswonders.com/wp-content/gallery/pyramids-of-egypt/giza-pyramids-cairo-egypt.jpg", description: "Nile River, ancient artifacts, pyramids")
