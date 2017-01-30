@@ -1,11 +1,11 @@
 <section class="edit">
   <%= form_for([@location, @post] , :html => { :class =>'form' }) do |f|  %>
       <p>
-        <%= f.label :title %>
+        <label for="">Destination</label>
         <%= f.text_field :title %>
       </p>
       <p>
-        <%= f.label :body %>
+        <label for="">What's special about it?</label>
         <%= f.text_area :body %>
       </p>
       <p>
